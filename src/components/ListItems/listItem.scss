@@ -1,0 +1,118 @@
+.ListItem {
+  width: 230px;
+  height: 120px;
+  // background-color: #1e272e;
+  margin-right: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 15px;
+
+  backdrop-filter: blur(12px) saturate(186%);
+  -webkit-backdrop-filter: blur(12px) saturate(186%);
+  background-color: #1e272ebe;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  .movieThubnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  video {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 10px;
+
+    top: 0;
+    left: 0;
+  }
+  &:hover {
+    width: 330px;
+    height: 310px;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 999;
+    top: -150px;
+    box-shadow: rgba(164, 164, 168, 0.25) 0px 13px 27px -5px,
+      rgba(161, 152, 152, 0.3) 0px 8px 16px -8px;
+
+    .movieThubnail {
+      height: 150px;
+      width: 100%;
+    }
+  }
+  .itemInfo {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    .icons {
+      display: flex;
+      margin-bottom: 10px;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+        border: 1px solid rgba(245, 243, 243, 0.74);
+        padding: 5px;
+        border-radius: 30%;
+        margin-right: 10px;
+        font-size: 18px;
+        transition: all 0.5s ease-in;
+        &:hover {
+          background-color: #fff;
+          color: #d40353;
+          box-shadow: 0 0 10px #d40353;
+          border-color: #d40353;
+        }
+      }
+    }
+    .itemInfoTop {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: lightgray;
+
+      
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .InfoTIcon {
+          color: lightgray;
+          margin-left: 5px;
+        }
+      }
+
+      .limit {
+        border: 0.5px solid gray;
+        padding: 2px 3px;
+        margin: 0px 10px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.5s ease-in;
+        &:hover {
+          background-color: #fff;
+          color: #d40353;
+          box-shadow: 0 0 10px #d40353;
+          border-color: #d40353;
+        }
+      }
+    }
+    .desc {
+      font-size: 13px;
+      margin-bottom: 10px 5px;
+    }
+    .genre {
+      font-size: 16px;
+      color: lightgray;
+      margin-bottom: 10px;
+    }
+  }
+}

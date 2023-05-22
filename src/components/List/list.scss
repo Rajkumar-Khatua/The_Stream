@@ -1,0 +1,49 @@
+.List {
+  width: 100%;
+  margin-top: 10px;
+  .listTitle {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 50px;
+  }
+  .wrapper {
+    position: relative;
+    margin-bottom: 30px;
+    .sliderArrow {
+      width: 30px;
+      // height: 100%;
+      color: #fff;
+      border-radius: 50%;
+      height: 30px;
+      padding: 5px;
+      position: absolute;
+      z-index: 99;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      &.left {
+        left: 0;
+      }
+      &.right {
+        right: 0;
+      }
+
+      &:hover {
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.253);
+        border-radius: 50%;
+        border: .5px solid rgba(209, 213, 219, 0.3);
+      }
+    }
+    .container {
+      margin-left: 50px;
+      margin-top: 10px;
+      display: flex;
+      width: max-content;
+      transform: translateX(0px);
+      transition: all 1s ease;
+    }
+  }
+}
